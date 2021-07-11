@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #dbdbdb;
+}
+
+.head {
+  width: 100%;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.575)), to(rgba(0, 0, 0, 0.575)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.575), rgba(0, 0, 0, 0.575));
+}
+
+.head .title {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.head .title a {
+  font-size: 44px;
+  padding: 0 10px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+}
+
+.head nav {
+  width: 60%;
+  height: 100%;
+  float: right;
+}
+
+.head nav ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.head nav ul li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.head nav ul li a {
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+  border: solid 1px #000;
+}
+
+.head nav ul li a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 1000px;
+  min-height: calc(100vh - 60px);
+}
+
+.container .post {
+  background-color: #fff;
+  width: 600px;
+  margin: 10px;
+  -webkit-box-shadow: 4px -1px 20px 1px #504e4e8f, -3px 1px 9px 0px #504e4e8f;
+          box-shadow: 4px -1px 20px 1px #504e4e8f, -3px 1px 9px 0px #504e4e8f;
+}
+
+.container .post header {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+.container .post header span {
+  font-size: 22px;
+  margin: 10px 0 0 10px;
+}
+
+.container .post header a {
+  margin: 10px 0 10px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.container .post section {
+  margin: 0 0 10px 0;
+  width: 100%;
+}
+
+.container .post section p {
+  padding: 10px;
+}
+
+.container .post section .thumbnail {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .post section .thumbnail img {
+  width: 100%;
+}
+
+.container .post footer {
+  width: 100%;
+}
+
+.container .post footer span {
+  font-size: 22px;
+  margin: 0 10px 0 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .post footer .category {
+  width: 100%;
+}
+
+.container .post footer .category img {
+  float: left;
+}
+
+.container .post footer .category a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}
+
+.container .post footer .comment a {
+  color: #000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  body .head {
+    width: 100%;
+    position: relative;
+  }
+  body .head .icon-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  body .head .title {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  body .head .title a {
+    font-size: 30px;
+    margin: 0 0 0 10px;
+  }
+  body .head nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: #000;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.808)), to(rgba(0, 0, 0, 0.781)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.808), rgba(0, 0, 0, 0.781));
+  }
+  body .head nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .head nav ul li {
+    height: 40px;
+    margin: 10px 0 20px 0;
+    width: 80%;
+    text-align: center;
+    float: none;
+    border: #fff 1px solid;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .head nav ul li a {
+    padding: 10px;
+    border: none;
+  }
+  body .head nav ul li:hover {
+    background: #000;
+    color: #fff;
+  }
+  body .head nav ul li:hover a {
+    color: #fff;
+  }
+}
+/*# sourceMappingURL=main.css.map */

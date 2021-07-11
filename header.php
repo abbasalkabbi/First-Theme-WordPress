@@ -12,11 +12,19 @@
 
 <body>
     <!--nav-->
-    <header>
+    <header class="head">
+        <!---icon menu for moblie-->
+        <div class="icon-menu">
+            <img src="<?php echo get_template_directory_uri().'/icon/menu.png';?>" alt="menu,icon">
+
+        </div>
+        <!---icon menu for moblie END-->
         <div class="title">
-            <h1>
+            <a href="<?php bloginfo('url')?>" title="<?php bloginfo('name')?>">
+
                 <?php bloginfo('name')?>
-            </h1>
+
+            </a>
         </div>
         <nav>
             <?php wp_nav_menu(array(
