@@ -1,13 +1,13 @@
+<!--- this is page show post --->
+
 <?php get_header();?>
-<!---container--->
 <div class="container">
-    <!---loop post--->
     <?php 
     if(have_posts()){
         while(have_posts()){
             the_post();?>
     <!---post--->
-    <div class="posts">
+    <div class="posts post">
         <!----header-->
         <header>
             <span class="author">
@@ -28,34 +28,10 @@
         <!----End header-->
         <!----section-->
         <section>
-            <!---
-                if post has_post_thumbnail 
-                add div class="thumbnail"
-                and add img
-                  -->
-            <?php  
-            if(has_post_thumbnail())
-            {
-                ?>
-            <div class="thumbnail">
-                <?php the_post_thumbnail();?>
-            </div>
 
-            <?php
-              }
-            ?>
-            <!---end if post has_post_thumbnail-->
             <!---print content post--->
-            <p> <?php the_excerpt(); ?> </p>
+            <p> <?php the_content (); ?> </p>
             <!---END print content post--->
-            <!---readmore--->
-            <div class="readmore">
-                <a href="<?php the_permalink()?>" title="<?php the_title();?>">
-                    Read More
-                </a>
-            </div>
-            <!---readmore END--->
-
         </section>
         <!----END section-->
         <!------footer--->
@@ -106,7 +82,5 @@
         }//end if
         ?>
     <!---loop post end --->
-
 </div>
-<!---end container--->
 <?php get_footer();?>

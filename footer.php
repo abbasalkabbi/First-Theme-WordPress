@@ -1,8 +1,7 @@
-<div class="footer">
-    <h1>
-        this is footer &copy;
-    </h1>
-</div>
+<footer class='footer'>
+
+</footer>
+
 <?php wp_footer();?>
 <!---end body -->
 </body>
