@@ -82,5 +82,15 @@
         }//end if
         ?>
     <!---loop post end --->
+
+    <?php comments_template();?>
+    <!----next-prev--->
+    <div class="next-prev">
+        <span class="prev"><?php previous_post_link()?></span>
+
+        <span class="next"> <?php next_post_link()?></span>
+
+    </div>
+    <!----next-prev END--->
 </div>
 <?php get_footer();?>

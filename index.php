@@ -1,6 +1,7 @@
 <?php get_header();?>
 <!---container--->
 <div class="container">
+
     <!---loop post--->
     <?php 
     if(have_posts()){
@@ -106,7 +107,14 @@
         }//end if
         ?>
     <!---loop post end --->
+    <!----next-prev--->
+    <div class="next-prev">
+        <span class="prev"><?php previous_posts_link()?></span>
 
+        <span class="next"> <?php next_posts_link()?></span>
+
+    </div>
+    <!----next-prev END--->
 </div>
 <!---end container--->
 <?php get_footer();?>

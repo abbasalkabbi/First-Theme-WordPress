@@ -7,6 +7,7 @@ body {
   background: #dbdbdb;
 }
 // style header
+// style page header
 .head {
   width: 100%;
   height: 60px;
@@ -15,6 +16,11 @@ body {
     hsla(0, 0%, 0%, 0.575),
     hsla(0, 0%, 0%, 0.575)
   );
+  .icon-menu {
+    ///style div icon in Head page=>
+    display: none; //trun of on pc
+    ///style div icon in Head page END
+  }
   .title {
     // title style
     float: left;
@@ -40,6 +46,12 @@ body {
     width: 60%;
     height: 100%;
     float: right;
+    //buuton div on just moblie
+    .hide {
+      // style hide
+      display: none; // trun of on pc
+      // style hide END
+    }
     ul {
       list-style: none;
       width: 100%;
@@ -63,19 +75,33 @@ body {
         }
       }
     }
-    //end nav
   }
+  //end nav
 }
 // style header end
+// footer.php style
+.footer {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    to right,
+    hsla(0, 0%, 0%, 0.575),
+    hsla(0, 0%, 0%, 0.575)
+  );
+}
+// footer.php style END
 // style container
+// style index.php
 .container {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
   width: 1000px;
-  min-height: calc(100vh - 60px);
-  .post {
+  min-height: calc(100vh - 120px);
+  position: relative;
+  .posts {
     //style post
     background-color: #fff;
     width: 600px;
@@ -116,7 +142,22 @@ body {
           width: 100%;
         }
       }
-
+      // readmore
+      .readmore {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          text-decoration: none;
+          color: #fff;
+          border: 1px solid #000;
+          padding: 5px 10px;
+          background: blue;
+        }
+      }
+      // readmore END
       //section post end
     }
     footer {
@@ -158,8 +199,157 @@ body {
     }
     //style post end
   }
+  .next-prev {
+    // div next and prev
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    span {
+      //span
+      position: absolute;
+
+      a {
+        padding: 10px;
+        border: 1px solid #000;
+        background-color: blue;
+        color: #fff;
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: rgb(4, 4, 95);
+      }
+      //span end
+    }
+    .next {
+      //next
+      right: 10px;
+      //next END
+    }
+    .prev {
+      left: 10px;
+    }
+    // div next and prev END
+  }
 }
 // style container
+
+//page single.php style
+.container {
+  .post {
+    width: 100%;
+    height: 100%;
+  }
+}
+//page single.php style END
+//comments.php
+.comments {
+  // comment
+
+  width: 100%;
+  .comment {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    background-color: #fff;
+
+    a {
+      text-decoration: none;
+      font-size: 22px;
+    }
+    span {
+      float: right;
+      font-size: 12px;
+    }
+  }
+  // comment END
+}
+// add comments
+.addcomment {
+  // addcomment
+  width: 100%;
+  .comment-respond {
+    //comment-respond
+    width: 100%;
+
+    h3 {
+      //h3
+      text-align: center;
+    }
+    //h3 END
+    form {
+      //form
+      width: 100%;
+      .comment-form-comment {
+        //comment-form-comment
+
+        textarea {
+          //textarea
+          width: 80%;
+          margin: 10px 0 10px 0;
+          outline: none;
+          border: none;
+          //textarea END
+        }
+        //comment-form-comment END
+      }
+      p {
+        //p
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+
+        input[type="text"] {
+          margin: 10px;
+          width: 80%;
+          height: 40px;
+          outline: none;
+          border: none;
+        }
+        // p END
+      }
+      .form-submit {
+        //form-submit
+        input {
+          margin: 10px;
+          width: 30%;
+          height: 40px;
+          outline: none;
+          border: none;
+          background-color: blue;
+          color: #fff;
+        }
+        input:hover {
+          cursor: pointer;
+          background-color: rgb(3, 3, 117);
+        }
+        //form-submit END
+      }
+      //form END
+    }
+    //comment-respond END
+  }
+  // addcomment END
+}
+// add comments ENd
+//comments.php END
+// 404.php style
+.page-error {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: red;
+  border-radius: 120px;
+  margin: 20% 0 0 0;
+}
+// 404.php style END
+//
 // moblie
 @media screen and (max-width: 700px) {
   body {
@@ -170,6 +360,10 @@ body {
       position: relative;
       .icon-menu {
         ///style div icon in Head page=>
+        /* this is will has  button 
+        when click this button will show menu (nav)
+        */
+        display: block;
         position: absolute;
         top: 10px;
         right: 20px;
@@ -190,6 +384,7 @@ body {
       }
       nav {
         // style nav in head page =>
+        display: none;
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -199,7 +394,19 @@ body {
           hsla(0, 0%, 0%, 0.808),
           hsla(0, 0%, 0%, 0.781)
         );
-
+        //buuton div
+        .hide {
+          // style hide
+          /*
+          this is will has button 
+          when click on button hide menu (nav)
+          */
+          display: block;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          // style hide END
+        }
         ul {
           // ul in nav
           display: flex;
@@ -242,3 +449,4 @@ body {
     //body style END
   }
 }
+// moblie END

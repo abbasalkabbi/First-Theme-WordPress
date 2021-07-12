@@ -26,6 +26,19 @@ function script(){
 function custome_menu(){
     register_nav_menu('menu-top' ,__('navbar top '));
 }
+
+/**filter */
+// this filter in  excerpt return just 15 word
+function extend_excerpt_length($length){
+    return 15;
+}
+// this function replace more in excerpt 
+function extend_excerpt_more($more){
+    return '...';
+}
+add_filter('excerpt_length','extend_excerpt_length'); // run function extend_excerpt_length
+add_filter('excerpt_more','extend_excerpt_more'); // run functionextend_excerpt_more
+
 // run function styles
 add_action('wp_enqueue_scripts','style'); 
 // run function scripts
