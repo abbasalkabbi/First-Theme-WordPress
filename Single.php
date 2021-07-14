@@ -113,6 +113,7 @@
     <!---loop post end --->
 
     <?php comments_template();?>
+    <div class="re"></div>
     <!----next-prev--->
     <?php if( get_previous_post_link() ) {?>
     <span class="prev"><?php previous_post_link()?></span>

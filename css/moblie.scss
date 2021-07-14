@@ -1,34 +1,187 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
+  //header
+  body {
+    //body style =>
+    .head {
+      //style head page =>
+      width: 100%;
+      position: relative;
+      .icon-menu {
+        ///style div icon in Head page=>
+        /* this is will has  button 
+        when click this button will show menu (nav)
+        */
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        ///style div icon in Head page END
+      }
+      .title {
+        ///style div title in Head page=>
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        a {
+          // a in title
+          font-size: 30px;
+          margin: 0 0 0 10px;
+          // a in title end
+        }
+        ///style div title Head page END
+      }
+      nav {
+        // style nav in head page =>
+        display: none;
+        z-index: 99;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background: #000;
+        background: linear-gradient(
+          to right,
+          hsla(0, 0%, 0%, 0.808),
+          hsla(0, 0%, 0%, 0.781)
+        );
+        //buuton div
+        .hide {
+          // style hide
+          /*
+          this is will has button 
+          when click on button hide menu (nav)
+          */
+          display: block;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          // style hide END
+        }
+        ul {
+          // ul in nav
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          li {
+            // li in ul in nav
+            height: 40px;
+            margin: 10px 0 20px 0;
+            width: 80%;
+            text-align: center;
+            float: none;
+            border: #fff 1px solid;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+              //a in li in ul in nav
+              padding: 10px;
+              border: none;
+              //a in li in ul in nav END
+            }
+            // li in ul in nav END
+          }
+          li:hover {
+            background: #000;
+            color: #fff;
+            a {
+              color: #fff;
+            }
+          }
+          // ul in nav END
+        }
+        // style nav in head page END
+      }
+      //style head page END
+    }
+    //body style END
+  }
+  //header END
+  // index.php
   .container {
     //container
     width: auto;
-    min-height: fit-content;
-
+    min-height: calc(100vh - 120px);
     .posts {
       //posts
       width: 100%;
       //posts
     }
-    .posts:nth-last-child() {
-      margin: 100px;
-    }
+
     .re {
       margin: 10px;
       width: 100%;
       height: 30px;
     }
-    .next,
-    .prev {
-      //next and prev
-      bottom: 10px;
-      position: absolute;
-      background-color: blue;
-      border: 1px solid #000;
-      padding: 10px;
-      color: #fff;
 
-      //next and prev end
+    //container END
+  }
+  //page single.php style
+  .container {
+    .posts {
+      width: 90%;
     }
+    .author-info {
+      //author info
+      background-color: #fff;
+      width: 100%;
+
+      height: 120px;
+      .image {
+        //img
+        float: left;
+        width: 120px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //img END
+      }
+      section {
+        width: calc(100% - 120px);
+        float: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        //section
+        a {
+          //a
+          position: absolute;
+          text-decoration: none;
+          top: 10px;
+          //a END
+        }
+
+        //section END
+      }
+      //author info END
+    }
+  }
+  //page single.php style END
+
+  // index.php
+}
+// moblie END
+//ipad
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .container {
+    width: auto;
+    min-height: calc(100vh - 120px);
+    .posts {
+      //posts
+      width: 600px;
+      //posts
+    }
+
+    .re {
+      margin: 10px;
+      width: 100%;
+      height: 50px;
+    }
+
     //container END
   }
 }
+//ipad END
