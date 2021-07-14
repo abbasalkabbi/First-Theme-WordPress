@@ -138,6 +138,65 @@
     text-decoration: none;
     top: 10px;
   }
+  .author .image {
+    width: 100%;
+    float: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 10px 0 0 0;
+  }
+  .author .name {
+    float: auto;
+    width: 100%;
+    background: #fff;
+    margin: 10px 0 0 0;
+  }
+  .author .name p {
+    padding: 10px;
+  }
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info .has {
+    margin: 30px;
+  }
+  .post_author {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .post_author header span {
+    width: 30%;
+    font-size: 12px;
+  }
+  .post_author header a {
+    font-size: 14px;
+  }
+  .post_author section {
+    width: 100%;
+  }
+  .post_author section .thumbnail {
+    width: 100%;
+    background: none;
+  }
+  .post_author section .content {
+    width: 100%;
+    height: fit;
+  }
+  .post_author footer {
+    height: 80px;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {

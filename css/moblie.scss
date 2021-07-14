@@ -117,6 +117,7 @@
 
     //container END
   }
+  //index.php END
   //page single.php style
   .container {
     .posts {
@@ -161,7 +162,92 @@
   }
   //page single.php style END
 
-  // index.php
+  //author
+  .author {
+    //author
+
+    .image {
+      //image
+      width: 100%;
+      float: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0 0 0;
+
+      //image END
+    }
+    .name {
+      //name
+      float: auto;
+      width: 100%;
+      background: #fff;
+      margin: 10px 0 0 0;
+      p {
+        padding: 10px;
+      }
+      //name END
+    }
+
+    //author END
+  }
+  //info
+  .info {
+    flex-direction: column;
+    .has {
+      margin: 30px;
+    }
+  }
+  //info  END
+  // post
+  .post_author {
+    //post_author
+    width: 90%;
+    height: fit-content;
+    header {
+      //header
+
+      span {
+        //span
+        width: 30%;
+        font-size: 12px;
+        //span END
+      }
+      a {
+        //a
+        font-size: 14px;
+        //a END
+      }
+      //header END
+    }
+    section {
+      //section
+      width: 100%;
+
+      .thumbnail {
+        //thumbnail
+        width: 100%;
+        background: none;
+        //thumbnail END
+      }
+      .content {
+        //content
+        width: 100%;
+        height: fit;
+
+        //content END
+      }
+      //section END
+    }
+    footer {
+      //footer
+      height: 80px;
+      //footer END
+    }
+    //post_author END
+  }
+  // post END
+  //author END
 }
 // moblie END
 //ipad
