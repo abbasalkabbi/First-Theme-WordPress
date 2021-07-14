@@ -47,7 +47,7 @@
             ?>
             <!---end if post has_post_thumbnail-->
             <!---print content post--->
-            <p> <?php the_excerpt(); ?> </p>
+            <?php the_excerpt(); ?>
             <!---END print content post--->
             <!---readmore--->
             <div class="readmore">
@@ -77,27 +77,40 @@
             <?php 
             } 
             ?>
-            <!---END if post has_category--->
-            <!-----
+            <!---comment div---->
+            <div class="comment">
+                <!---END if post has_category--->
+                <!-----
             if can writer comment on post 
             add span comment
             add icon comment to span
             add  comments_popup_link
             --->
-            <?php if(comments_open())
+                <?php if(comments_open())
             {
             ?>
-            <span class="comment">
-                <img src="<?php echo get_template_directory_uri() .'/icon/comment.png' ?>" alt="">
-                <?php comments_popup_link( '0 Comment','1 Comment','% Comments','comment-uri', )?>
+                <span>
+                    <img src="<?php echo get_template_directory_uri() .'/icon/comment.png' ?>" alt="">
+                    <?php comments_popup_link( '0 Comment','1 Comment','% Comments','comment-uri', )?>
 
 
-            </span>
-            <?php 
+                </span>
+                <?php 
+            }else{
+            ?>
+                <!--END if can writer comment on post  -->
+                <!----if cant writer comment on post--->
+                <span class="comment-no">
+                    <img src="<?php echo get_template_directory_uri() .'/icon/comment.png' ?>" alt="">
+                    <h2>Can't comment</h2>
+
+                </span>
+                <?php 
             }
             ?>
-            <!--END if can writer comment on post  -->
-
+                <!----END if cant writer comment on post--->
+            </div>
+            <!---comment div END---->
         </footer>
         <!----END --footer--->
     </div>
@@ -107,13 +120,14 @@
         }//end if
         ?>
     <!---loop post end --->
+    <div class="re"></div>
     <!----next-prev--->
-    <div class="next-prev">
-        <span class="prev"><?php previous_posts_link()?></span>
-
-        <span class="next"> <?php next_posts_link()?></span>
-
-    </div>
+    <?php if( get_previous_posts_link() ) {?>
+    <span class="prev"><?php previous_posts_link()?></span>
+    <?php } ?>
+    <?php if( get_next_posts_link() ) {?>
+    <span class="next"> <?php next_posts_link()?></span>
+    <?php } ?>
     <!----next-prev END--->
 </div>
 <!---end container--->

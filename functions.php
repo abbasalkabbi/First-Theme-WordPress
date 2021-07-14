@@ -10,6 +10,10 @@ add_theme_support('post-thumbnails');
  */
 function style(){
     wp_enqueue_style('main-css',get_template_directory_uri().'/css/main.css');
+    wp_enqueue_style('comment-css',get_template_directory_uri().'/css/comment.css');
+    wp_enqueue_style('author-css',get_template_directory_uri().'/css/author.css');
+    wp_enqueue_style('moblie-css',get_template_directory_uri().'/css/moblie.css');
+    
 }
 /***
  * function script js import 
@@ -30,7 +34,11 @@ function custome_menu(){
 /**filter */
 // this filter in  excerpt return just 15 word
 function extend_excerpt_length($length){
-    return 15;
+    if(is_author()){
+        return 55;
+    }else{
+        return 25;
+    } 
 }
 // this function replace more in excerpt 
 function extend_excerpt_more($more){

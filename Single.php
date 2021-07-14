@@ -53,30 +53,59 @@
             } 
             ?>
             <!---END if post has_category--->
-            <!-----
+            <!---comment div---->
+            <div class="comment">
+                <!---END if post has_category--->
+                <!-----
             if can writer comment on post 
             add span comment
             add icon comment to span
             add  comments_popup_link
             --->
-            <?php if(comments_open())
+                <?php if(comments_open())
             {
             ?>
-            <span class="comment">
-                <img src="<?php echo get_template_directory_uri() .'/icon/comment.png' ?>" alt="">
-                <?php comments_popup_link( '0 Comment','1 Comment','% Comments','comment-uri', )?>
+                <span>
+                    <img src="<?php echo get_template_directory_uri() .'/icon/comment.png' ?>" alt="">
+                    <?php comments_popup_link( '0 Comment','1 Comment','% Comments','comment-uri', )?>
 
 
-            </span>
-            <?php 
+                </span>
+                <?php 
+            }else{
+            ?>
+                <!--END if can writer comment on post  -->
+                <!----if cant writer comment on post--->
+                <span class="comment-no">
+                    <img src="<?php echo get_template_directory_uri() .'/icon/comment.png' ?>" alt="">
+                    <h2>Can't comment</h2>
+
+                </span>
+                <?php 
             }
             ?>
-            <!--END if can writer comment on post  -->
+                <!----END if cant writer comment on post--->
+            </div>
+            <!---comment div END---->
 
         </footer>
         <!----END --footer--->
     </div>
     <!---End post--->
+    <!---info about author---->
+    <div class="author-info">
+        <div class="image">
+            <?php echo get_avatar(get_the_author_meta('ID'),96)?>
+        </div>
+
+        <section>
+            <a
+                href="<?php echo get_author_posts_url(get_the_author_meta('ID'))?>"><?php echo get_the_author_meta('first_name').' '.get_the_author_meta('last_name') ?></a>
+            <p><?php echo get_the_author_meta('description')?></p>
+        </section>
+
+    </div>
+    <!---info about author END---->
     <?php
         }//end while
         }//end if
@@ -85,12 +114,12 @@
 
     <?php comments_template();?>
     <!----next-prev--->
-    <div class="next-prev">
-        <span class="prev"><?php previous_post_link()?></span>
-
-        <span class="next"> <?php next_post_link()?></span>
-
-    </div>
+    <?php if( get_previous_post_link() ) {?>
+    <span class="prev"><?php previous_post_link()?></span>
+    <?php } ?>
+    <?php if( get_next_post_link() ) {?>
+    <span class="next"> <?php next_post_link()?></span>
+    <?php } ?>
     <!----next-prev END--->
 </div>
 <?php get_footer();?>

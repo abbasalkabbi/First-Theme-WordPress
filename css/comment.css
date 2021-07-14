@@ -1,0 +1,143 @@
+.comments-container {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  min-height: calc(100% + 100px);
+}
+
+.comments-container .comment-body {
+  background-color: #fff;
+  padding: 10px;
+  position: relative;
+}
+
+.comments-container .comment-body .comment-author .fn {
+  position: absolute;
+}
+
+.comments-container .comment-body .comment-meta {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.comments-container .comment-body .comment-meta a:nth-child(1) {
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+
+.comments-container .comment-body .comment-meta .comment-edit-link {
+  text-decoration: none;
+  background-color: #140202fd;
+  color: #fff;
+}
+
+.comments-container .comment-body .reply {
+  bottom: 5px;
+  right: 0;
+}
+
+.comments-container .comment-body .reply a {
+  text-decoration: none;
+  padding: 5px;
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+  background-color: blue;
+  color: #fff;
+}
+
+.comments-container .comment-body .reply a:hover {
+  color: #000;
+}
+
+.comments-container .children {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.comments-container .children li {
+  background-color: #dbdbdb;
+}
+
+.comments-container .children li .comment-body {
+  background-color: #dbdbdb;
+}
+
+.comments-container .children .children {
+  background-color: #dbdbdb;
+  padding: 10px 10px 10px 40px;
+}
+
+.comments-container .children .children li .comment-body {
+  background-color: #fff;
+}
+
+.addcomment {
+  width: 100%;
+}
+
+.addcomment .comment-respond {
+  width: 100%;
+}
+
+.addcomment .comment-respond h3 {
+  text-align: center;
+}
+
+.addcomment .comment-respond form {
+  width: 100%;
+}
+
+.addcomment .comment-respond form .comment-form-comment textarea {
+  width: 80%;
+  margin: 10px 0 10px 0;
+  outline: none;
+  border: none;
+}
+
+.addcomment .comment-respond form p {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addcomment .comment-respond form p input[type="text"] {
+  margin: 10px;
+  width: 80%;
+  height: 40px;
+  outline: none;
+  border: none;
+}
+
+.addcomment .comment-respond form .form-submit input {
+  margin: 10px;
+  width: 30%;
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: blue;
+  color: #fff;
+}
+
+.addcomment .comment-respond form .form-submit input:hover {
+  cursor: pointer;
+  background-color: #030375;
+}
+/*# sourceMappingURL=comment.css.map */

@@ -189,9 +189,51 @@ body {
 
       .comment {
         //comment
-        a {
-          color: #000;
-          text-decoration: none;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span {
+          //span
+          width: 200px;
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          background: blue;
+          a {
+            //a
+            text-decoration: none;
+            color: #fff;
+            font-size: 22px;
+            //a END
+          }
+          //span END
+        }
+        span:hover {
+          //span hover
+          background-color: rgb(4, 4, 95);
+          a {
+            //a
+            color: #000;
+            //a END
+          }
+          //span hover END
+        }
+        .comment-no {
+          //comment no
+          background-color: gray;
+          font-size: 12px;
+          //comment no END
+        }
+        .comment-no:hover {
+          //comment no
+          background-color: red;
+          cursor: pointer;
+          //comment no END
         }
       }
       //end comment
@@ -199,38 +241,43 @@ body {
     }
     //style post end
   }
-  .next-prev {
-    // div next and prev
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    bottom: 10px;
-    span {
-      //span
-      position: absolute;
 
-      a {
-        padding: 10px;
-        border: 1px solid #000;
-        background-color: blue;
-        color: #fff;
-        text-decoration: none;
-      }
-      a:hover {
-        background-color: rgb(4, 4, 95);
-      }
-      //span end
+  .next,
+  .prev {
+    //next and prev
+    bottom: 10px;
+    position: absolute;
+    background-color: blue;
+    border: 1px solid #000;
+    padding: 10px;
+    color: #fff;
+    a {
+      padding: 10px;
+      background-color: blue;
+      text-decoration: none;
+      color: #fff;
     }
-    .next {
-      //next
-      right: 10px;
-      //next END
-    }
-    .prev {
-      left: 10px;
-    }
-    // div next and prev END
+
+    //next and prev end
   }
+  .next:hover,
+  .prev:hover {
+    background-color: rgb(4, 4, 95);
+    cursor: pointer;
+    a {
+      background-color: rgb(4, 4, 95);
+    }
+  }
+  .next {
+    //next
+    right: 10px;
+
+    //next END
+  }
+  .prev {
+    left: 10px;
+  }
+  // div next and prev END
 }
 // style container
 
@@ -240,101 +287,45 @@ body {
     width: 100%;
     height: 100%;
   }
-}
-//page single.php style END
-//comments.php
-.comments {
-  // comment
-
-  width: 100%;
-  .comment {
-    width: 80%;
-    margin: 10px;
-    padding: 10px;
-    float: left;
+  .author-info {
+    //author info
     background-color: #fff;
-
-    a {
-      text-decoration: none;
-      font-size: 22px;
-    }
-    span {
-      float: right;
-      font-size: 12px;
-    }
-  }
-  // comment END
-}
-// add comments
-.addcomment {
-  // addcomment
-  width: 100%;
-  .comment-respond {
-    //comment-respond
     width: 100%;
 
-    h3 {
-      //h3
-      text-align: center;
+    height: 120px;
+    .image {
+      //img
+      float: left;
+      width: 120px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //img END
     }
-    //h3 END
-    form {
-      //form
-      width: 100%;
-      .comment-form-comment {
-        //comment-form-comment
+    section {
+      width: calc(100% - 120px);
+      float: left;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      //section
+      a {
+        //a
+        position: absolute;
+        text-decoration: none;
+        top: 10px;
+        //a END
+      }
 
-        textarea {
-          //textarea
-          width: 80%;
-          margin: 10px 0 10px 0;
-          outline: none;
-          border: none;
-          //textarea END
-        }
-        //comment-form-comment END
-      }
-      p {
-        //p
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: center;
-
-        input[type="text"] {
-          margin: 10px;
-          width: 80%;
-          height: 40px;
-          outline: none;
-          border: none;
-        }
-        // p END
-      }
-      .form-submit {
-        //form-submit
-        input {
-          margin: 10px;
-          width: 30%;
-          height: 40px;
-          outline: none;
-          border: none;
-          background-color: blue;
-          color: #fff;
-        }
-        input:hover {
-          cursor: pointer;
-          background-color: rgb(3, 3, 117);
-        }
-        //form-submit END
-      }
-      //form END
+      //section END
     }
-    //comment-respond END
+    //author info END
   }
-  // addcomment END
 }
-// add comments ENd
+//page single.php style END
+
 //comments.php END
 // 404.php style
 .page-error {

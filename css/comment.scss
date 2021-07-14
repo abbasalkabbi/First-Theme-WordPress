@@ -1,0 +1,162 @@
+.comments-container {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  min-height: calc(100% + 100px);
+  .comment-body {
+    //comment-body
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    //comment-body END
+    .comment-author {
+      //comment-author
+      .fn {
+        //name author the comment
+        position: absolute;
+        //name author the comment ENd
+      }
+
+      //comment-author END
+    }
+    .comment-meta {
+      //comment-meta
+      top: 0;
+      right: 0;
+      position: absolute;
+      a:nth-child(1) {
+        font-size: 12px;
+        color: #000;
+        text-decoration: none;
+      }
+      .comment-edit-link {
+        //comment-edit-link
+        text-decoration: none;
+        background-color: #140202fd;
+        color: #fff;
+        //comment-edit-link END
+      }
+      //comment-meta END
+    }
+    .reply {
+      bottom: 5px;
+      right: 0;
+      a {
+        text-decoration: none;
+        padding: 5px;
+        bottom: 10px;
+        position: absolute;
+        right: 10px;
+        background-color: blue;
+        color: #fff;
+      }
+      a:hover {
+        //a hover
+        color: #000;
+        //a hover
+      }
+    }
+  }
+  //reply
+  .children {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+    //reply
+    li {
+      background-color: #dbdbdb;
+      .comment-body {
+        background-color: #dbdbdb;
+      }
+    }
+    .children {
+      /// reply to reply
+      background-color: #dbdbdb;
+      padding: 10px 10px 10px 40px;
+      li {
+        .comment-body {
+          background-color: #fff;
+        }
+      }
+      /// reply to reply END
+    }
+
+    //reply END
+  }
+}
+
+//reply END
+// add comments
+.addcomment {
+  // addcomment
+  width: 100%;
+  .comment-respond {
+    //comment-respond
+    width: 100%;
+
+    h3 {
+      //h3
+      text-align: center;
+    }
+    //h3 END
+    form {
+      //form
+      width: 100%;
+      .comment-form-comment {
+        //comment-form-comment
+
+        textarea {
+          //textarea
+          width: 80%;
+          margin: 10px 0 10px 0;
+          outline: none;
+          border: none;
+          //textarea END
+        }
+        //comment-form-comment END
+      }
+      p {
+        //p
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+
+        input[type="text"] {
+          margin: 10px;
+          width: 80%;
+          height: 40px;
+          outline: none;
+          border: none;
+        }
+        // p END
+      }
+      .form-submit {
+        //form-submit
+
+        input {
+          margin: 10px;
+          width: 30%;
+          height: 40px;
+          outline: none;
+          border: none;
+          background-color: blue;
+          color: #fff;
+        }
+        input:hover {
+          cursor: pointer;
+          background-color: rgb(3, 3, 117);
+        }
+        //form-submit END
+      }
+      //form END
+    }
+    //comment-respond END
+  }
+  // addcomment END
+}
+// add comments ENd

@@ -217,39 +217,101 @@ body {
   color: #000;
 }
 
-.container .posts footer .comment a {
-  color: #000;
-  text-decoration: none;
-}
-
-.container .next-prev {
+.container .posts footer .comment {
   width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .posts footer .comment span {
+  width: 200px;
   height: 40px;
-  position: absolute;
-  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: blue;
 }
 
-.container .next-prev span {
-  position: absolute;
-}
-
-.container .next-prev span a {
-  padding: 10px;
-  border: 1px solid #000;
-  background-color: blue;
-  color: #fff;
+.container .posts footer .comment span a {
   text-decoration: none;
+  color: #fff;
+  font-size: 22px;
 }
 
-.container .next-prev span a:hover {
+.container .posts footer .comment span:hover {
   background-color: #04045f;
 }
 
-.container .next-prev .next {
+.container .posts footer .comment span:hover a {
+  color: #000;
+}
+
+.container .posts footer .comment .comment-no {
+  background-color: gray;
+  font-size: 12px;
+}
+
+.container .posts footer .comment .comment-no:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.container .next,
+.container .prev {
+  bottom: 10px;
+  position: absolute;
+  background-color: blue;
+  border: 1px solid #000;
+  padding: 10px;
+  color: #fff;
+}
+
+.container .next a,
+.container .prev a {
+  padding: 10px;
+  background-color: blue;
+  text-decoration: none;
+  color: #fff;
+}
+
+.container .next:hover,
+.container .prev:hover {
+  background-color: #04045f;
+  cursor: pointer;
+}
+
+.container .next:hover a,
+.container .prev:hover a {
+  background-color: #04045f;
+}
+
+.container .next {
   right: 10px;
 }
 
-.container .next-prev .prev {
+.container .prev {
   left: 10px;
 }
 
@@ -258,89 +320,44 @@ body {
   height: 100%;
 }
 
-.comments {
-  width: 100%;
-}
-
-.comments .comment {
-  width: 80%;
-  margin: 10px;
-  padding: 10px;
-  float: left;
+.container .author-info {
   background-color: #fff;
-}
-
-.comments .comment a {
-  text-decoration: none;
-  font-size: 22px;
-}
-
-.comments .comment span {
-  float: right;
-  font-size: 12px;
-}
-
-.addcomment {
   width: 100%;
+  height: 120px;
 }
 
-.addcomment .comment-respond {
-  width: 100%;
-}
-
-.addcomment .comment-respond h3 {
-  text-align: center;
-}
-
-.addcomment .comment-respond form {
-  width: 100%;
-}
-
-.addcomment .comment-respond form .comment-form-comment textarea {
-  width: 80%;
-  margin: 10px 0 10px 0;
-  outline: none;
-  border: none;
-}
-
-.addcomment .comment-respond form p {
-  width: 100%;
+.container .author-info .image {
+  float: left;
+  width: 120px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.addcomment .comment-respond form p input[type="text"] {
-  margin: 10px;
-  width: 80%;
-  height: 40px;
-  outline: none;
-  border: none;
+.container .author-info section {
+  width: calc(100% - 120px);
+  float: left;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
-.addcomment .comment-respond form .form-submit input {
-  margin: 10px;
-  width: 30%;
-  height: 40px;
-  outline: none;
-  border: none;
-  background-color: blue;
-  color: #fff;
-}
-
-.addcomment .comment-respond form .form-submit input:hover {
-  cursor: pointer;
-  background-color: #030375;
+.container .author-info section a {
+  position: absolute;
+  text-decoration: none;
+  top: 10px;
 }
 
 .page-error {

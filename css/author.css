@@ -1,0 +1,241 @@
+.author {
+  width: 100%;
+  height: 100%;
+}
+
+.author .image {
+  width: 280px;
+  height: 100%;
+  float: left;
+}
+
+.author .image img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid 10px #fff;
+}
+
+.author .name {
+  width: calc(100% - 280px);
+  float: left;
+}
+
+.author .name ul {
+  list-style: none;
+}
+
+.author .name ul li {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.info {
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info .has {
+  width: 300px;
+  height: 200px;
+  margin: 0 10px 0 10px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -webkit-box-shadow: 13px 12px 20px 11px #949494;
+          box-shadow: 13px 12px 20px 11px #949494;
+}
+
+.info .has h2 {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+.info .has p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  width: 100%;
+  font-size: 34px;
+}
+
+.post_author {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  margin: 10px 0 10px 0;
+}
+
+.post_author header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post_author header span {
+  width: 20%;
+}
+
+.post_author header a {
+  text-decoration: none;
+  text-align: center;
+  width: 80%;
+}
+
+.post_author section {
+  width: 100%;
+}
+
+.post_author section .thumbnail {
+  background-color: #dbdbdb;
+  width: 180px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+}
+
+.post_author section .content {
+  width: calc(100% - 180px);
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.post_author section .content .readmore {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 0 0;
+}
+
+.post_author section .content .readmore a {
+  padding: 10px;
+  background-color: blue;
+  text-decoration: none;
+  color: #fff;
+}
+
+.post_author section .content .readmore a:hover {
+  background-color: #04045f;
+}
+
+.post_author footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.post_author footer span {
+  width: 200px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: blue;
+}
+
+.post_author footer span a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+}
+
+.post_author footer span:hover {
+  background-color: #04045f;
+}
+
+.post_author footer span:hover a {
+  color: #000;
+}
+
+.post_author footer .comment-no {
+  background-color: gray;
+}
+
+.post_author footer .comment-no:hover {
+  background-color: red;
+}
+/*# sourceMappingURL=author.css.map */
