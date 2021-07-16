@@ -1,6 +1,6 @@
 <?php get_header();?>
 <!---container--->
-<?php get_sidebar()?>
+
 <div class="container">
 
     <!---loop post--->
@@ -74,6 +74,7 @@
             <span class="category">
                 <img src="<?php echo get_template_directory_uri() .'/icon/tags.png' ?>" alt="">
                 <?php the_category(',');?>
+
             </span>
             <?php 
             } 
