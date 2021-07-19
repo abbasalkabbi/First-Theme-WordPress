@@ -116,36 +116,7 @@
     <!----comments------>
     <?php comments_template();?>
     <!----END comments------>
-    <!---some post in his category --->
-    <div class="posts-category">
-        <?php 
-   /** 
-    * This Will get 1 post has seem category 
-    * and 
-    *show just title 
-    *and link to  go 
-    */
-    $args_post_category=array(
-        'post__not_in'    => array(get_queried_object_id()),// this will dont show the seem post 
-        'category__in'    => wp_get_post_categories(get_queried_object_id()), // this will get categories ID 
-        'orderby'         => 'rand',//this will random posts
-        'posts_per_page'  => 1 // this will show just one post
-    );// this args will go inside the function new WP_Query
-    // start function  
-    $post_category= new WP_Query($args_post_category);
-    // if check is there any post
-     if($post_category->have_posts()){
-         // loop to show post 
-        while($post_category->have_posts()){
-            $post_category->the_post(); ?>
 
-
-        echo the_title();
-        <?php } // end loop post 
-               } //end if ?>
-        ?>
-    </div>
-    <!---some post in his category  END--->
     <div class="re"></div>
     <!----next-prev--->
     <?php if( get_previous_post_link() ) {?>
